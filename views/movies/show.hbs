@@ -1,0 +1,10 @@
+<form action="/movies/{{movieData._id}}/delete" method="POST">
+<h2>{{movieData.title}}</h2>
+<p>Genre: {{movieData.genre}}</p>
+<p>Plot:{{movieData.plot}}</p>
+<ul>Cast:{{#each movieData.cast}}
+    <li>{{this.name}}</li>
+    {{/each}}
+</ul>
+<button>Delete this movie</button>
+</form>
