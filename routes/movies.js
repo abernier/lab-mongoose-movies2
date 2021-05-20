@@ -63,6 +63,6 @@ router.post('/:id', (req, res, next) => {
         }
     }).then((movie) => res.redirect('/movies/show'))
     .catch(err => console.log(err))
-})
+});
 
 module.exports = router;
