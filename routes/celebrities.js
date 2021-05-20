@@ -7,8 +7,7 @@ const Celebrity = require('../models/celebrity.js');
 router.get('/', (req, res, next) => {
   Celebrity.find()
     .then(celebrities => res.render('celebrities/index', {celebrities}))
-    .catch(err => next(err))
-  ;
+    .catch(err => next(err));
 });
 
 router.post('/', (req, res, next) => {
