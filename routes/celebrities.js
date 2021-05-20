@@ -3,11 +3,11 @@ const router  = express.Router();
 
 const Celebrity = require('../models/celebrity.js');
 
+
 router.get('/', (req, res, next) => {
   Celebrity.find()
     .then(celebrities => res.render('celebrities/index', {celebrities}))
-    .catch(err => next(err))
-  ;
+    .catch(err => next(err));
 });
 
 router.post('/', (req, res, next) => {
@@ -67,5 +67,7 @@ router.post('/:id', (req, res, next) => {
     .catch(err => next(err))
   ;
 });
+
+
 
 module.exports = router;
